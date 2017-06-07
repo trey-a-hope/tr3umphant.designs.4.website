@@ -162,6 +162,25 @@
                         </fieldset>
                     </td>
                 </tr>
+                <!-- Email Functionality -->
+                <tr>
+                    <td>
+                        <i class="fa fa-envelope orange-text"></i>
+                    </td>
+                    <td>
+                        E-Mail Functionality
+                    </td>
+                    <td>
+                        Ability to send forms through email to users.
+                    </td>
+                    <td>{{ vm.emailFunctionalityCost | currency: "$" }}</td>
+                    <td>
+                        <fieldset class="form-group">
+                            <input type="checkbox" id="emailFunctionality" ng-model="vm.emailFunctionality">
+                            <label for="emailFunctionality"></label>
+                        </fieldset>
+                    </td>
+                </tr>
                 <!-- Database Integration -->
                 <tr>
                     <td>
@@ -260,6 +279,24 @@
                             <input type="checkbox" id="ongoingWebsiteMaintenance" ng-model="vm.ongoingWebsiteMaintenance">
                             <label for="ongoingWebsiteMaintenance"></label>
                         </fieldset>
+                    </td>
+                </tr>
+                <!-- Google APIs -->
+                <tr>
+                    <td>
+                        <i class="fa fa-gears orange-text"></i>
+                    </td>
+                    <td>
+                        Google APIs
+                    </td>
+                    <td>
+                        Access to Google Maps, Google Analytics, AdMob, etc.
+                    </td>
+                    <td>{{ vm.googleAPICost | currency: "$" }}/API</td>
+                    <td>
+                        <form class="range-field">
+                            <input type="range" min="0" max="10" ng-model="vm.numberOfGoogleAPIs"/>
+                        </form>
                     </td>
 
                 </tr>

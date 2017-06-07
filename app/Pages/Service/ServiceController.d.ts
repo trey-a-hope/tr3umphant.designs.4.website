@@ -20,6 +20,10 @@ declare module App.Pages.Service {
         storage: boolean;
         baseDevelopmentCost: number;
         baseDevelopment: boolean;
+        numberOfGoogleAPIs: number;
+        googleAPICost: number;
+        emailFunctionalityCost: number;
+        emailFunctionality: boolean;
         totalCost: number;
         static $inject: string[];
         constructor($scope: any, $state: ng.ui.IStateService);

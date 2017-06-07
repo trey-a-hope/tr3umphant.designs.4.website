@@ -19,6 +19,10 @@ module App.Pages.Service {
         storage: boolean = false;
         baseDevelopmentCost: number = 250.00;
         baseDevelopment: boolean = true;
+        numberOfGoogleAPIs: number = 0;
+        googleAPICost: number = 29.99;
+        emailFunctionalityCost: number = 19.99;
+        emailFunctionality: boolean = false;
         totalCost: number;
         static $inject = ['$scope', '$state'];
         constructor(public $scope: any, public $state: ng.ui.IStateService){
@@ -35,6 +39,8 @@ module App.Pages.Service {
             this.ongoingWebsiteMaintenance ? this.totalCost += this.ongoingWebsiteMaintenanceCost : null;
             this.storage ? this.totalCost += this.storageCost : null;
             this.baseDevelopment ? this.totalCost += this.baseDevelopmentCost : null;
+            this.totalCost += this.numberOfGoogleAPIs * this.googleAPICost;
+            this.emailFunctionality ? this.totalCost += this.emailFunctionalityCost : null;
         }
 
         sendQuoteToContact = (): void => {

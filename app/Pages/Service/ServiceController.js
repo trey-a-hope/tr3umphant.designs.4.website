@@ -27,6 +27,10 @@ var App;
                     this.storage = false;
                     this.baseDevelopmentCost = 250.00;
                     this.baseDevelopment = true;
+                    this.numberOfGoogleAPIs = 0;
+                    this.googleAPICost = 29.99;
+                    this.emailFunctionalityCost = 19.99;
+                    this.emailFunctionality = false;
                     this.calculate = function () {
                         _this.totalCost = 0;
                         _this.totalCost += _this.numberOfPages * _this.pageCost;
@@ -38,6 +42,8 @@ var App;
                         _this.ongoingWebsiteMaintenance ? _this.totalCost += _this.ongoingWebsiteMaintenanceCost : null;
                         _this.storage ? _this.totalCost += _this.storageCost : null;
                         _this.baseDevelopment ? _this.totalCost += _this.baseDevelopmentCost : null;
+                        _this.totalCost += _this.numberOfGoogleAPIs * _this.googleAPICost;
+                        _this.emailFunctionality ? _this.totalCost += _this.emailFunctionalityCost : null;
                     };
                     this.sendQuoteToContact = function () {
                         var message = 'goog booger';
