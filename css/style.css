@@ -1,0 +1,41 @@
+/* YOUR CUSTOM STYLES */
+section#home{
+    background-image: url('../img/background/gplay.png');
+    background-position: center;
+    background-repeat: repeat;
+}
+section#about{
+    background-image: url('../img/background/bright-squares.png');
+    background-position: center;
+    background-repeat: repeat;
+}
+section#service{
+    background-image: url('../img/background/mirrored-squares.png');
+    background-position: center;
+    background-repeat: repeat;
+}
+section#projects{
+    background-image: url('../img/background/escheresque.png');
+    background-position: center;
+    background-repeat: repeat;
+}
+section#comments{
+    background-image: url('../img/background/asfalt-dark.png');
+    background-position: center;
+    background-repeat: repeat;
+}
+section#blog{
+    background-image: url('../img/background/grid-noise.png');
+    background-position: center;
+    background-repeat: repeat;
+}
+section#full-blog{
+    background-image: url('../img/background/grid-noise.png');
+    background-position: center;
+    background-repeat: repeat;
+}
+section#contact{
+    background-image: url('../img/background/brushed-alum.png');
+    background-position: center;
+    background-repeat: repeat;
+}

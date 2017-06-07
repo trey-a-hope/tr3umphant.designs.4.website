@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="tr3umphant-designs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Tr3umphant.Designs</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-93971476-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.js"></script>
+    <!-- Angular Page Routing -->
+    <script src="js/angular-ui-router.js"></script>    
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+    <!-- Module -->
+    <script src="app/Modules/Tr3umphantDesigns.js"></script>
+    <!-- Models -->
+    <script src="app/Models/Blog.js"></script>
+    <!-- Controllers -->
+    <script src="app/Modal/DisplayNotificationModalController.js"></script>
+    <script src="app/Pages/About/AboutController.js"></script>
+    <script src="app/Pages/Blog/BlogController.js"></script>
+    <script src="app/Pages/Blog/FullBlogController.js"></script>
+    <script src="app/Pages/Comments/CommentsController.js"></script>
+    <script src="app/Pages/Contact/ContactController.js"></script>
+    <script src="app/Pages/GraphicDesign/GraphicDesignController.js"></script>
+    <script src="app/Pages/Home/HomeController.js"></script>
+    <script src="app/Pages/Portfolio/PortfolioController.js"></script>
+    <script src="app/Pages/Projects/ProjectsController.js"></script>
+    <script src="app/Pages/Service/ServiceController.js"></script>
+    <script src="app/Pages/Skills/SkillsController.js"></script>
+    <!-- Services -->
+    <script src="app/Services/EmailService.js"></script>
+    <script src="app/Services/ModalService.js"></script>
+    <script src="app/Services/MyFirebaseRef.js"></script>
+    <!-- Routing -->
+    <script src="app/Routing/Routing.js"></script>
+  </head>
+
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-toggleable-sm navbar-dark teal darken-4">
+        <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <strong>Tr3umphant.Designs</strong>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav1">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <!--<form class="form-inline waves-effect waves-light">
+                    <input class="form-control" type="text" placeholder="Search">
+                </form>-->
+            </div>
+        </div>
+    </nav>  
+
+    <style>
+      button{
+        cursor: pointer;
+      }
+    </style>
+    
+    <!-- Main Views -->
+    <div ui-view=""></div>
+
+    <!-- Footer -->
+    <footer class="page-footer teal darken-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col center">
+                    <h5 class="text-center">Follow Me</h5>
+                    <div class="social-section">
+                        <ul>
+                            <li><a href="https://www.facebook.com/tr3umphantdesigns/" class="btn-floating btn-small btn-fb"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/tr3designs" class="btn-floating btn-small btn-tw"><i class="fa fa-twitter"> </i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCjcR0stkmPmeYkf9JDEq_ZQ" class="btn-floating btn-small btn-yt"><i class="fa fa-youtube"> </i></a></li>
+                            <li><a href="https://www.instagram.com/tr3umphant.designs/?hl=en" class="btn-floating btn-small btn-ins"><i class="fa fa-instagram"> </i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                ©2017 Copyright Tr3umphant.Designs
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+  </body>
+</html>

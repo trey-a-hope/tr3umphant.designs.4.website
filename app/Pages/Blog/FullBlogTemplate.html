@@ -1,0 +1,34 @@
+<section id="full-blog" class="animated fadeIn" style="padding: 30px 0">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a class="btn-floating btn-small red" ng-click="vm.back()"><i class="fa fa-arrow-left"></i></a>
+                <h1 class="orange-text"><strong>{{ vm.blog.title }}</strong></h1>
+                <hr>
+                <h4>{{ vm.blog.subtitle }}</h4>
+                <h5>Posted {{ vm.blog.postDateTime }}</h5>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col">
+                <p ng-bind-html="vm.blog.html"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="btn-group dropup">
+                    <button class="btn teal darken 4 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Share Blog</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="" ng-click="vm.share('FACEBOOK')">To Facebook</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="" ng-click="vm.share('TWITTER')">To Twitter</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="" ng-click="vm.share('LINKEDIN')">To LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

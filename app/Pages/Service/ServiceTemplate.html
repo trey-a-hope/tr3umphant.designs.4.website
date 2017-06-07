@@ -1,0 +1,262 @@
+<section id="service" class="animated fadeIn" style="padding: 30px 0">
+    <div class="container">        
+        <div class="row">
+            <div class="col">
+                <h1 class="orange-text"><strong>Service</strong></h1>
+                <hr>
+                <h4>What Can I Do For You?</h4>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <p>With Tr3umphant.Designs, development for your next website and/or app is only a click away. As a personal developer with an ample amount of background experience, I can make your dream business plan, money venture, or even personal portfolio, come to life.</p>
+            </div>
+        </div>
+        <div class="row m-t-1">
+            <div class="col-md-12">
+                <!-- Stepers Wrapper -->
+                <ul class="stepper stepper-vertical">
+                    <!-- First Step -->
+                    <li class="completed">
+                        <a href="#!">
+                            <span class="circle">1</span>
+                            <span class="label">First Step - Contact <i class="fa fa-envelope"></i></span>
+                        </a>
+                        <div class="step-content grey lighten-3">
+                            <p>By contacting me via through this website, my email, and/or phone number, I can know that you are interested in the service. I am currently taking request for website development, (and mobile development if the concept is fairly simple).</p>
+                        </div>
+                    </li>
+                    <!-- Second Step -->
+                    <li class="active">
+                        <a href="#!">
+                            <span class="circle">2</span>
+                            <span class="label">Second Step - Discussion/Planning <i class="fa fa-edit"></i></span>
+                        </a>
+                        <div class="step-content grey lighten-3">
+                            <p>We now need to iron out all the details of your request. To ensure you are getting the best deal for your website, we need to discuss which plan you choose, when you need the project finished, the purpose of your website, etc. I take notes of any information provided to ensure nothing is left out of the development process.</p>
+                        </div>
+                    </li>
+                    <!-- Third Step -->
+                    <li class="active">
+                        <a href="#!">
+                            <span class="circle">3</span>
+                            <span class="label">Third Step - Development <i class="fa fa-code"></i></span>
+                        </a>
+                        <div class="step-content grey lighten-3">
+                            <p>Now I can start creating your app. The first half of the cost of you project will be due as a deposit. In order to insure you receive your product in a timely fashion, we will have the time estimate discussed in the prior step. In this period, I will be contacting you weekly for questions/updates with your app.</p>
+                        </div>
+                    </li>
+                    <!-- Fourth Step -->
+                    <li class="active">
+                        <a href="#!">
+                            <span class="circle">4</span>
+                            <span class="label">Forth Step - Completion <i class="fa fa-thumbs-up"></i></span>
+                        </a>
+                        <div class="step-content grey lighten-3">
+                            <p>At this point, your product is complete, and I will be walking you through the steps to putting your website on your own domain or on the Android/iOS market. The second half of the fee for development is due at this point as well.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                    <h4>Website Quote Calculator</h4>
+                    <p>Development pricing is very project specific, meaning these prices are not set in stone. Based on factors such as time, material needed, and purpose for your project, the fee can easily flucuate; these, however, are the most accurate estimates. <strong>Note - Payments will require half of the cost upfront as deposit, and the other half once the project is complete.</strong></p>
+                    <p><strong>(* represents Google's Firebase Feature)</strong></p>
+            </div>
+        </div>
+        <!-- Quote Table -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Feature</th>
+                    <th>Description</th>
+                    <th>Cost</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Number of Pages -->
+                <tr>
+                    <td>
+                        <i class="fa fa-wpforms orange-text"></i>
+                    </td>
+                    <td>
+                        Number of Pages
+                    </td>
+                    <td>
+                        For single or multiple page applications.
+                    </td>
+                    <td>
+                        {{ vm.pageCost | currency: "$" }}/page
+                    </td>
+                    <td>
+                        <form class="range-field">
+                            <input type="range" min="0" max="20" ng-model="vm.numberOfPages"/>
+                        </form>
+                    </td>
+                </tr>
+                <!-- Domain Name -->
+                <tr>
+                    <td>
+                        <i class="fa fa-pencil orange-text"></i>
+                    </td>
+                    <td>
+                        Domain Name
+                    </td>
+                    <td>
+                        The unique name that appears in the URL for your website.
+                    </td>
+                    <td>
+                        {{ vm.domainNameCost | currency: "$" }}/year
+                    </td>
+                    <td>
+                        <fieldset class="form-group">
+                            <input type="checkbox" id="domainName" ng-model="vm.domainName">
+                            <label for="domainName"></label>
+                        </fieldset>
+                    </td>
+                </tr>
+                <!-- Website Hosting -->
+                <tr>
+                    <td>
+                        <i class="fa fa-desktop orange-text"></i>
+                    </td>
+                    <td>
+                        Website Hosting
+                    </td>
+                    <td>
+                        Use my server, or host on your own server.
+                    </td>
+                    <td>
+                        {{ vm.websiteHostingCost | currency: "$" }}/year
+                    </td>
+                    <td>
+                        <fieldset class="form-group">
+                            <input type="checkbox" id="websiteHosting" ng-model="vm.websiteHosting">
+                            <label for="websiteHosting"></label>
+                        </fieldset>
+                    </td>
+                </tr>
+                <!-- Database Integration -->
+                <tr>
+                    <td>
+                        <i class="fa fa-database orange-text"></i>
+                    </td>
+                    <td>
+                        Database Integration*
+                    </td>
+                    <td>
+                        NoSQL Database, information is stored securly and accessed swiftly.
+                    </td>
+                    <td>
+                        {{ vm.databaseIntegrationCost | currency: "$" }}
+                    </td>
+                    <td>
+                        <fieldset class="form-group">
+                            <input type="checkbox" id="databaseIntegration" ng-model="vm.databaseIntegration">
+                            <label for="databaseIntegration"></label>
+                        </fieldset>
+                    </td>
+                </tr>
+                <!-- User Authentication -->
+                <tr>
+                    <td>
+                        <i class="fa fa-users orange-text"></i>
+                    </td>
+                    <td>
+                        User Authentication*
+                    </td>
+                    <td>
+                        Have users authenticate themselves by email & password, Facebook, Twitter, Google+, or Github.
+                    </td>
+                    <td>{{ vm.userAuthenticationCost | currency: "$" }}</td>
+                    <td>
+                        <fieldset class="form-group">
+                            <input type="checkbox" id="userAuthentication" ng-model="vm.userAuthentication">
+                            <label for="userAuthentication"></label>
+                        </fieldset>
+                    </td>
+
+                </tr>
+                <!-- Storage -->
+                <tr>
+                    <td>
+                        <i class="fa fa-clone orange-text"></i>
+                    </td>
+                    <td>
+                        Storage*
+                    </td>
+                    <td>
+                        Uploading of pdfs, word documents, pictures, videos, etc.
+                    </td>
+                    <td>{{ vm.storageCost | currency: "$" }}</td>
+                    <td>
+                        <fieldset class="form-group">
+                            <input type="checkbox" id="storage" ng-model="vm.storage">
+                            <label for="storage"></label>
+                        </fieldset>
+                    </td>
+
+                </tr>
+                <!-- Ecommerce -->
+                <tr>
+                    <td>
+                        <i class="fa fa-dollar orange-text"></i>
+                    </td>
+                    <td>
+                        Ecommerce
+                    </td>
+                    <td>
+                        Incorporate paid services into your app.
+                    </td>
+                    <td>{{ vm.ecommerceCost | currency: "$" }}</td>
+                    <td>
+                        <fieldset class="form-group">
+                            <input type="checkbox" id="ecommerce" ng-model="vm.ecommerce">
+                            <label for="ecommerce"></label>
+                        </fieldset>
+                    </td>
+
+                </tr>
+                <!-- Ongoing Website Maintenance -->
+                <tr>
+                    <td>
+                        <i class="fa fa-wrench orange-text"></i>
+                    </td>
+                    <td>
+                        Ongoing Website Maintenance
+                    </td>
+                    <td>
+                        To ensure your website stays up to date.
+                    </td>
+                    <td>{{ vm.ongoingWebsiteMaintenanceCost | currency: "$" }}/year</td>
+                    <td>
+                        <fieldset class="form-group">
+                            <input type="checkbox" id="ongoingWebsiteMaintenance" ng-model="vm.ongoingWebsiteMaintenance">
+                            <label for="ongoingWebsiteMaintenance"></label>
+                        </fieldset>
+                    </td>
+
+                </tr>
+            </table>
+        <div class="row">
+            <div class="col">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn orange pull-left" ng-click="vm.calculate()">Calculate Estimate</button>
+                <button ng-show="vm.totalCost > 0" class="btn blue pull-left" ng-click="vm.sendQuoteToContact()">Contact Now With This Quote</button>
+                <div class="md-form pull-right">
+                    <h1 class="green-text">{{ vm.totalCost | currency: "$" }}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

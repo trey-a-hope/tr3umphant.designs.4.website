@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "commonjs",
+        "declaration": true,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "sourceMap": true
+    },
+    "files": [
+        "app/Services/EmailService.ts",
+        "app/Services/ModalService.ts",
+        "app/Services/MyFirebaseRef.ts",
+        "app/Modal/DisplayNotificationModalController.ts",
+        "app/Models/Blog.ts",
+        "app/Modules/Tr3umphantDesigns.ts",
+        "app/Pages/About/AboutController.ts",
+        "app/Pages/Blog/BlogController.ts",
+        "app/Pages/Blog/FullBlogController.ts",
+        "app/Pages/Comments/CommentsController.ts",
+        "app/Pages/Contact/ContactController.ts",
+        "app/Pages/GraphicDesign/GraphicDesignController.ts",
+        "app/Pages/Home/HomeController.ts",
+        "app/Pages/Portfolio/PortfolioController.ts",
+        "app/Pages/Projects/ProjectsController.ts",
+        "app/Pages/Service/ServiceController.ts",
+        "app/Pages/Skills/SkillsController.ts",
+        "app/Routing/Routing.ts",
+        "typings/angular.d.ts",
+        "typings/angular-route.d.ts",
+        "typings/angular-ui-bootstrap.d.ts",
+        "typings/angular-ui-router.d.ts",
+        "typings/es6-promise.d.ts",
+        "typings/firebase.d.ts",
+        "typings/jquery.d.ts",
+        "typings/spotify-api.d.ts",
+        "typings/spotify-web-api.d.ts"
+    ]
+}

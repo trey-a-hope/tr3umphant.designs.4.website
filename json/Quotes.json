@@ -1,0 +1,72 @@
+[
+    {
+        "title" : "\"I want the world, you can have the block.\"",
+        "subTitle" : "-Dave East",
+        "class" : "success"
+    },
+    {
+        "title" : "\"Iz you gonna live on your knees or die on your feet?\"",
+        "subTitle" : "-Ab Soul",
+        "class" : "info"
+    },
+    {
+        "title" : "\"Protect yo soul like thick socks.\"",
+        "subTitle" : "-Mick Jenkins",
+        "class" : "danger"
+    },
+    {
+        "title" : "\"Study long, study wrong.\"",
+        "subTitle" : "-Kendrick Lamar",
+        "class" : "warning"
+    },
+    {
+        "title" : "\"I'm tryna make a million dollars, it won't take me long.\"",
+        "subTitle" : "-TUT",
+        "class" : "success"
+    },
+    {
+        "title" : "\"You get as far as the people you talk to for no reason.\"",
+        "subTitle" : "-50 Cent",
+        "class" : "info"
+    },
+    {
+        "title" : "\"I'm a free agent like the second matrix.\"",
+        "subTitle" : "-Chance The Rapper",
+        "class" : "danger"
+    },
+    {
+        "title" : "\"If you don't believe in God, then at least believe in odds.\"",
+        "subTitle" : "-Lupe Fiasco",
+        "class" : "warning"
+    },
+    {
+        "title" : "\"Everybody wants to go to heaven, but nobody wants to die.\"",
+        "subTitle" : "-Grandmother",
+        "class" : "success"
+    },
+    {
+        "title" : "\"I am young but I get it, I am young but I'm gettin' it.\"",
+        "subTitle" : "-Cozz",
+        "class" : "info"
+    },
+    {
+        "title" : "\"Ain't no such thing as Satan, evil is what you make it.\"",
+        "subTitle" : "-King Chip",
+        "class" : "danger"
+    },
+    {
+        "title" : "\"Goyard by my 44, go hard cuz this world is yours.\"",
+        "subTitle" : "-Nipsey Hu$$le",
+        "class" : "warning"
+    },
+    {
+        "title" : "\"Walk like warriors, we were never told to run.\"",
+        "subTitle" : "-Common",
+        "class" : "success"
+    },
+    {
+        "title" : "\"Nothing comes from sleeping but a dream.\"",
+        "subTitle" : "-Kevin Gates",
+        "class" : "info"
+    }
+]
