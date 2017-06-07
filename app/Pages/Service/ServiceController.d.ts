@@ -18,6 +18,8 @@ declare module App.Pages.Service {
         ongoingWebsiteMaintenance: boolean;
         storageCost: number;
         storage: boolean;
+        baseDevelopmentCost: number;
+        baseDevelopment: boolean;
         totalCost: number;
         static $inject: string[];
         constructor($scope: any, $state: ng.ui.IStateService);

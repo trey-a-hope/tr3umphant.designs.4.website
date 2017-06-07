@@ -25,6 +25,8 @@ var App;
                     this.ongoingWebsiteMaintenance = false;
                     this.storageCost = 59.99;
                     this.storage = false;
+                    this.baseDevelopmentCost = 250.00;
+                    this.baseDevelopment = true;
                     this.calculate = function () {
                         _this.totalCost = 0;
                         _this.totalCost += _this.numberOfPages * _this.pageCost;
@@ -35,6 +37,7 @@ var App;
                         _this.ecommerce ? _this.totalCost += _this.ecommerceCost : null;
                         _this.ongoingWebsiteMaintenance ? _this.totalCost += _this.ongoingWebsiteMaintenanceCost : null;
                         _this.storage ? _this.totalCost += _this.storageCost : null;
+                        _this.baseDevelopment ? _this.totalCost += _this.baseDevelopmentCost : null;
                     };
                     this.sendQuoteToContact = function () {
                         var message = 'goog booger';

@@ -17,6 +17,8 @@ module App.Pages.Service {
         ongoingWebsiteMaintenance: boolean = false;
         storageCost: number = 59.99;
         storage: boolean = false;
+        baseDevelopmentCost: number = 250.00;
+        baseDevelopment: boolean = true;
         totalCost: number;
         static $inject = ['$scope', '$state'];
         constructor(public $scope: any, public $state: ng.ui.IStateService){
@@ -32,6 +34,7 @@ module App.Pages.Service {
             this.ecommerce ? this.totalCost += this.ecommerceCost : null;
             this.ongoingWebsiteMaintenance ? this.totalCost += this.ongoingWebsiteMaintenanceCost : null;
             this.storage ? this.totalCost += this.storageCost : null;
+            this.baseDevelopment ? this.totalCost += this.baseDevelopmentCost : null;
         }
 
         sendQuoteToContact = (): void => {
