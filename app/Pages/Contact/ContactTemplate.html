@@ -4,30 +4,31 @@
             <div class="col">
                 <h1 class="orange-text"><strong>Contact</strong></h1>
                 <hr>
-                <h4>If you have a request already in mind or just have general questions, please submit a message.</h4>
             </div>
         </div>
         <br>
         <div class="row">
             <div class="col-sm-6">
+                <h4>If you have a request already in mind or just have general questions, please submit a message.</h4>
+                <br>
                 <ng-form novalidate name="contactForm">
                         <!--Body-->
                         <div class="md-form">
                             <i class="fa fa-user prefix"></i>
                             <input type="text" id="name" class="form-control" required="required" ng-model="vm.fullName">
-                            <label for="name">Your full name</label>
+                            <label class="active" for="name">Your full name</label>
                         </div>
 
                         <div class="md-form">
                             <i class="fa fa-envelope prefix"></i>
                             <input type="text" id="email" class="form-control" required="required" ng-pattern="vm.emailRegex" ng-model="vm.email">
-                            <label for="email">Your email</label>
+                            <label class="active" for="email">Your email</label>
                         </div>
 
                         <div class="md-form">
                             <i class="fa fa-tag prefix"></i>
                             <textarea type="text" id="message" class="md-textarea" required="required"  ng-model="vm.message" maxlength="400"></textarea>
-                            <label for="message">Message <strong>({{ vm.message.length + '/' + vm.messageLimit }})</strong></label>
+                            <label class="active" for="message">Message <strong>({{ vm.message.length + '/' + vm.messageLimit }})</strong></label>
                         </div>
 
                         <div class="text-center">
@@ -36,6 +37,12 @@
                 </ng-form>
             </div>
             <div class="col-sm-6 text-center">
+                <i class="fa fa-envelope fa-5x"></i>
+                <p>tr3umphant.designs@gmail.com</p>
+                <br>
+                <i class="fa fa-phone fa-5x"></i>
+                <p>(937)270-5527</p>
+                <br>
                 <h2>Like My Page?</h2>
                 <h5>Please share my website! It's quick and I'll thank you forever.</h5>
                 <div class="btn-group dropup">

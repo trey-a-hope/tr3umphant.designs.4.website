@@ -7,7 +7,7 @@ declare module App.Contact {
         class: string;
     }
     class ContactController {
-        $scope: any;
+        $scope: ng.IScope;
         $http: ng.IHttpService;
         $location: ng.ILocationService;
         emailService: EmailService;
@@ -20,7 +20,7 @@ declare module App.Contact {
         toastMessages: Array<ToastMessage>;
         emailRegex: RegExp;
         static $inject: string[];
-        constructor($scope: any, $http: ng.IHttpService, $location: ng.ILocationService, emailService: EmailService, $state: ng.ui.IStateService);
+        constructor($scope: ng.IScope, $http: ng.IHttpService, $location: ng.ILocationService, emailService: EmailService, $state: ng.ui.IStateService);
         prepareToastMessages: () => void;
         sendEmail: (form: any) => void;
         share: (provider: string) => void;
