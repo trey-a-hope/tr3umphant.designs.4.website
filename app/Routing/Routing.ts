@@ -45,16 +45,16 @@ module Routing {
             });
 
             /* Blog */
-            this.$stateProvider.state('blog', {
-                url: '/blog',
+            this.$stateProvider.state('blogs', {
+                url: '/blogs',
                 templateUrl: 'app/Pages/Blog/BlogTemplate.html',
                 controller: 'BlogController',
                 controllerAs: 'vm'
             });
 
             /* Full Blog */
-            this.$stateProvider.state('full-blog', {
-                url: '/full-blog',
+            this.$stateProvider.state('blog', {
+                url: '/blog/{path:.*}',
                 templateUrl: 'app/Pages/Blog/FullBlogTemplate.html',
                 controller: 'FullBlogController',
                 controllerAs: 'vm',

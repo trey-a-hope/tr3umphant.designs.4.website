@@ -34,7 +34,7 @@ module App.Pages.Blog {
         }
 
         viewBlog = (blog: Blog): void => {
-            this.$state.go('full-blog', {
+            this.$state.go('blog', {
                 blog: blog
             });
         }

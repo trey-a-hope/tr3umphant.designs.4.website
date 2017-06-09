@@ -14,11 +14,11 @@ var App;
                     this.$location = $location;
                     this.blog = null;
                     this.back = function () {
-                        _this.$state.go('blog');
+                        _this.$state.go('blogs');
                     };
                     this.share = function (provider) {
                         var url = _this.$location.absUrl();
-                        var text = 'Check out this blog I just read via Tr3umphant.Designs';
+                        var text = 'Check out this blog I just read through Tr3umphant.Designs';
                         switch (provider) {
                             case 'TWITTER':
                                 window.open('http://twitter.com/share?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text), '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
@@ -34,7 +34,9 @@ var App;
                         }
                     };
                     if (this.$state.params.blog == null) {
-                        var tag = $location.search().title;
+                        var path = $location.absUrl();
+                        var n = path.lastIndexOf('/');
+                        var tag = path.substring(n + 1);
                         this.myFirebaseRef.blogDatabaseRef.orderByChild("tag").equalTo(tag).on('child_added', function (snapshot) {
                             _this.blog = snapshot.val();
                             if (!_this.$scope.$$phase) {
@@ -44,7 +46,7 @@ var App;
                     }
                     else {
                         this.blog = this.$state.params.blog;
-                        $location.search('title', this.blog.tag);
+                        $location.path('/blog/' + this.blog.tag);
                     }
                     window.scrollTo(0, 0);
                 }

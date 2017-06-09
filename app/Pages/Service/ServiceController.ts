@@ -45,7 +45,7 @@ module App.Pages.Service {
         }
 
         sendQuoteToContact = (): void => {
-            var message: string = 'New request for website - ';
+            var message: string = 'NEW REQUEST FOR WEBSITE : FEATURES - ';
             var features: Array<string> = new Array<string>();
             /* Determine Features Added */
             if(this.numberOfPages > 0){
@@ -87,7 +87,7 @@ module App.Pages.Service {
                 }
             }
             /* Add Estimate */
-            message += '; estimate including $' + this.baseDevelopmentCost.toFixed(2) + ' base development fee - $' + this.totalCost.toFixed(2);
+            message += ': ESTIMATE INCLUDING $' + this.baseDevelopmentCost.toFixed(2) + ' BASE DEVELOPMENT FEE - $' + this.totalCost.toFixed(2);
             this.$state.go('contact', { message: message });
         }
 

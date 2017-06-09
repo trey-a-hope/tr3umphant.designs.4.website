@@ -25,7 +25,7 @@ var App;
                         return _title;
                     };
                     this.viewBlog = function (blog) {
-                        _this.$state.go('full-blog', {
+                        _this.$state.go('blog', {
                             blog: blog
                         });
                     };

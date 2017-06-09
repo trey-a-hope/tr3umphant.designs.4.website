@@ -50,8 +50,8 @@ var App;
                     }
                 };
                 this.share = function (provider) {
-                    var url = 'http://treyahope.tr3umphant-designs.com';
-                    var text = 'Check out this development service called Tr3umphant.Designs!';
+                    var url = 'http://td4.tr3umphant-designs.com';
+                    var text = 'Check out this software development service called Tr3umphant.Designs!';
                     switch (provider) {
                         case 'TWITTER':
                             window.open('http://twitter.com/share?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text), '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');

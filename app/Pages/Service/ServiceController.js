@@ -46,7 +46,7 @@ var App;
                         _this.totalCost += _this.numberOfGoogleAPIs * _this.googleAPICost;
                     };
                     this.sendQuoteToContact = function () {
-                        var message = 'New request for website - ';
+                        var message = 'NEW REQUEST FOR WEBSITE : FEATURES - ';
                         var features = new Array();
                         if (_this.numberOfPages > 0) {
                             features.push(_this.numberOfPages + ' pages');
@@ -86,7 +86,7 @@ var App;
                                 message += features[i] + ', ';
                             }
                         }
-                        message += '; estimate including $' + _this.baseDevelopmentCost.toFixed(2) + ' base development fee - $' + _this.totalCost.toFixed(2);
+                        message += ': ESTIMATE INCLUDING $' + _this.baseDevelopmentCost.toFixed(2) + ' BASE DEVELOPMENT FEE - $' + _this.totalCost.toFixed(2);
                         _this.$state.go('contact', { message: message });
                     };
                 }
