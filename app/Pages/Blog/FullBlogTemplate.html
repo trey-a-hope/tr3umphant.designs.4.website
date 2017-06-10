@@ -1,11 +1,24 @@
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93971476-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
 <section id="full-blog" class="animated fadeIn" style="padding: 30px 0">
     <div class="container">
         <div class="row">
             <div class="col">
                 <a class="btn-floating btn-small red" ng-click="vm.back()"><i class="fa fa-arrow-left"></i></a>
-                <h1 class="orange-text"><strong>{{ vm.blog.title }}</strong></h1>
+                <img src="img/blogs/mdbootstrap.jpeg" class="img-fluid" alt="">
+                <br>
+                <h1 class="orange-text animated zoomInRight"><strong>{{ vm.blog.title }}</strong></h1>
                 <hr>
-                <h4>{{ vm.blog.subtitle }}</h4>
+                <h4 class="animated zoomInRight">{{ vm.blog.subtitle }}</h4>
                 <h5>Posted {{ vm.blog.postDateTime }}</h5>
             </div>
         </div>

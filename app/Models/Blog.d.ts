@@ -7,5 +7,7 @@ declare module App.Models {
         postDateTime: string;
         html: string;
         tag: string;
+        views: number;
+        shares: number;
     }
 }

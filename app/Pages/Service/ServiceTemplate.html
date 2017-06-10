@@ -1,10 +1,21 @@
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93971476-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
 <section id="service" class="animated fadeIn" style="padding: 30px 0">
     <div class="container">        
         <div class="row">
             <div class="col">
-                <h1 class="orange-text"><strong>Service</strong></h1>
+                <h1 class="orange-text animated zoomInRight"><strong>Service</strong></h1>
                 <hr>
-                <h4>What Can I Do For You?</h4>
+                <h4 class="animated zoomInRight">What Can I Do For You?</h4>
             </div>
         </div>
         <br>
@@ -307,7 +318,8 @@
                 <button class="btn orange pull-left" ng-click="vm.calculate()">Calculate Estimate</button>
                 <button ng-show="vm.totalCost > vm.baseDevelopmentCost" class="btn blue pull-left" ng-click="vm.sendQuoteToContact()">Contact Now With This Quote</button>
                 <div class="md-form pull-right">
-                    <h1 class="green-text">{{ vm.totalCost | currency: "$" }}</h1>
+                    <h1 class="green-text" ng-show="vm.depositCost"><strong>{{ vm.depositCost | currency: "$" }} Deposit</strong></h1>
+                    <h4 class="green-text" ng-show="vm.totalCost">{{ vm.totalCost | currency: "$" }} Total with deposit</h4>
                 </div>
             </div>
         </div>

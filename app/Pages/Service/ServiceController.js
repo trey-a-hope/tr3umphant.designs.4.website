@@ -32,6 +32,12 @@ var App;
                     this.numberOfGoogleAPIs = 0;
                     this.googleAPICost = 29.99;
                     this.calculate = function () {
+                        if (_this.numberOfPages == 0) {
+                            toastr.error('Must select at least one page for website.');
+                            _this.totalCost = null;
+                            _this.depositCost = null;
+                            return;
+                        }
                         _this.totalCost = 0;
                         _this.totalCost += _this.baseDevelopmentCost;
                         _this.totalCost += _this.numberOfPages * _this.pageCost;
@@ -44,6 +50,7 @@ var App;
                         _this.ecommerce ? _this.totalCost += _this.ecommerceCost : null;
                         _this.ongoingWebsiteMaintenance ? _this.totalCost += _this.ongoingWebsiteMaintenanceCost : null;
                         _this.totalCost += _this.numberOfGoogleAPIs * _this.googleAPICost;
+                        _this.depositCost = _this.totalCost / 2;
                     };
                     this.sendQuoteToContact = function () {
                         var message = 'NEW REQUEST FOR WEBSITE : FEATURES - ';

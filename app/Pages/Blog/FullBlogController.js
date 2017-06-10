@@ -17,6 +17,8 @@ var App;
                         _this.$state.go('blogs');
                     };
                     this.share = function (provider) {
+                        _this.blog.shares += 1;
+                        _this.myFirebaseRef.blogDatabaseRef.child(_this.blog.id).child('shares').set(_this.blog.shares);
                         var url = _this.$location.absUrl();
                         var text = 'Check out this blog I just read through Tr3umphant.Designs';
                         switch (provider) {
@@ -39,6 +41,7 @@ var App;
                         var tag = path.substring(n + 1);
                         this.myFirebaseRef.blogDatabaseRef.orderByChild("tag").equalTo(tag).on('child_added', function (snapshot) {
                             _this.blog = snapshot.val();
+                            _this.myFirebaseRef.blogDatabaseRef.child(_this.blog.id).child('views').set(_this.blog.views + 1);
                             if (!_this.$scope.$$phase) {
                                 _this.$scope.$apply();
                             }

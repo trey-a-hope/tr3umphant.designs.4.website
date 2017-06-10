@@ -4,15 +4,15 @@ var Tr3umphantDesigns = (function () {
             'ui.router',
             'ngSanitize'
         ])
-            .directive('staticInclude', function ($http, $templateCache, $compile) {
-            return function (scope, element, attrs) {
-                var templatePath = attrs.staticInclude;
-                $http.get(templatePath, { cache: $templateCache }).success(function (response) {
-                    var contents = element.html(response).contents();
-                    $compile(contents)(scope);
-                });
-            };
-        });
+            .controller('ParentController', (_a = (function () {
+                function ParentController($state) {
+                    this.$state = $state;
+                }
+                return ParentController;
+            }()),
+            _a.$inject = ['$state'],
+            _a));
+        var _a;
     }
     return Tr3umphantDesigns;
 }());

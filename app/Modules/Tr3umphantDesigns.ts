@@ -7,16 +7,15 @@ class Tr3umphantDesigns{
             'ui.router',
             'ngSanitize'
         ])
-        /* Directive - Static Include - Used for ng-include to keep parent scope through templates */
-        .directive('staticInclude', ($http: ng.IHttpService, $templateCache: ng.ITemplateCacheService, $compile: ng.ICompileService) => {
-            return (scope: ng.IScope, element: any, attrs: any): any => {
-                var templatePath = attrs.staticInclude;
-                $http.get(templatePath, { cache: $templateCache }).success((response: any) => {
-                    var contents = element.html(response).contents();
-                    $compile(contents)(scope);
-                });
-            };
+        /* Parent App Controller */
+        .controller('ParentController', class ParentController {
+            static $inject = ['$state'];
+            constructor(public $state: ng.ui.IStateService){
+                
+            }
         });
     }
 }
+
+     
 new Tr3umphantDesigns();

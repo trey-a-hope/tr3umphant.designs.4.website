@@ -25,6 +25,7 @@ var App;
                         return _title;
                     };
                     this.viewBlog = function (blog) {
+                        _this.myFirebaseRef.blogDatabaseRef.child(blog.id).child('views').set(blog.views + 1);
                         _this.$state.go('blog', {
                             blog: blog
                         });

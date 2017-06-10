@@ -16,6 +16,8 @@ module App.Pages.Blog {
                 /* Serach for blog based on tag */
                 this.myFirebaseRef.blogDatabaseRef.orderByChild("tag").equalTo(tag).on('child_added', (snapshot: FirebaseDataSnapshot) => {
                     this.blog = snapshot.val();
+                    /* Increment view count */
+                    this.myFirebaseRef.blogDatabaseRef.child(this.blog.id).child('views').set(this.blog.views + 1);
                     /* Refresh UI. */
                     if(!this.$scope.$$phase){
                         this.$scope.$apply();
@@ -36,10 +38,15 @@ module App.Pages.Blog {
         }
 
         share = (provider: string): void => {
+            /* Increment share count */
+            this.blog.shares += 1;
+            this.myFirebaseRef.blogDatabaseRef.child(this.blog.id).child('shares').set(this.blog.shares);
+            /* Prepare share content */
             var url: string = this.$location.absUrl();
             var text: string = 'Check out this blog I just read through Tr3umphant.Designs';
             switch(provider){
                 case 'TWITTER':
+                /* Increment view count */
                     window.open('http://twitter.com/share?url='+encodeURIComponent(url)+'&text='+encodeURIComponent(text), '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
                     break;
                 case 'FACEBOOK':

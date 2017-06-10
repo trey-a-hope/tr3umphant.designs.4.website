@@ -34,6 +34,8 @@ module App.Pages.Blog {
         }
 
         viewBlog = (blog: Blog): void => {
+            /* Increment view count */
+            this.myFirebaseRef.blogDatabaseRef.child(blog.id).child('views').set(blog.views + 1);
             this.$state.go('blog', {
                 blog: blog
             });

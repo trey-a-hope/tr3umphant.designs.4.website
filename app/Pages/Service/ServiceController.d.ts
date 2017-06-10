@@ -3,6 +3,7 @@ declare module App.Pages.Service {
         $scope: any;
         $state: ng.ui.IStateService;
         totalCost: number;
+        depositCost: number;
         baseDevelopmentCost: number;
         baseDevelopment: boolean;
         numberOfPages: number;

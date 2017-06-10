@@ -2,6 +2,7 @@ module App.Pages.Service {
 
     export class ServiceController {
         totalCost: number;
+        depositCost: number;
         baseDevelopmentCost: number = 250.00;
         baseDevelopment: boolean = true;
         numberOfPages: number = 0;
@@ -30,6 +31,13 @@ module App.Pages.Service {
         }
 
         calculate = (): void => {
+            if(this.numberOfPages == 0){
+                toastr.error('Must select at least one page for website.');
+                this.totalCost = null;
+                this.depositCost = null;
+                return;
+            }
+
             this.totalCost = 0;
             this.totalCost += this.baseDevelopmentCost;
             this.totalCost += this.numberOfPages * this.pageCost;
@@ -42,6 +50,7 @@ module App.Pages.Service {
             this.ecommerce ? this.totalCost += this.ecommerceCost : null;
             this.ongoingWebsiteMaintenance ? this.totalCost += this.ongoingWebsiteMaintenanceCost : null;
             this.totalCost += this.numberOfGoogleAPIs * this.googleAPICost;
+            this.depositCost = this.totalCost / 2;
         }
 
         sendQuoteToContact = (): void => {
