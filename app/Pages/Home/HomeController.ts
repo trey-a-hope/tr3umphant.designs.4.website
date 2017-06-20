@@ -1,12 +1,11 @@
 module App.Pages.Home {
 
     export class HomeController {
-        speedMs: number = 150;
-        stringA: string = 'T';
-        stringB: string = 'r3umphant.Designs';
+        speedMs: number = 200;
+        stringA: string = 'D';
+        stringB: string = 'evelopment At The Click of A Finger';
         count: number = 0;
         descending: boolean = false;
-        //Tr3umphant.Designs
 
         static $inject = ['$scope', '$timeout'];
         constructor(public $scope: any, public $timeout: ng.ITimeoutService){
@@ -16,11 +15,11 @@ module App.Pages.Home {
         countUp = (): void => {
             if(this.stringA.length == 1){
                 this.descending = false;
-                this.speedMs = 150;
+                this.speedMs = 200;
             }
             else if(this.stringA.length == this.stringB.length + 1){
                 this.descending = true;
-                this.speedMs = 100;
+                this.speedMs = 150;
             }
 
             if(!this.descending){

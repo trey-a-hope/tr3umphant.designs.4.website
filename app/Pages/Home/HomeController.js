@@ -9,19 +9,19 @@ var App;
                     var _this = this;
                     this.$scope = $scope;
                     this.$timeout = $timeout;
-                    this.speedMs = 150;
-                    this.stringA = 'T';
-                    this.stringB = 'r3umphant.Designs';
+                    this.speedMs = 200;
+                    this.stringA = 'D';
+                    this.stringB = 'evelopment At The Click of A Finger';
                     this.count = 0;
                     this.descending = false;
                     this.countUp = function () {
                         if (_this.stringA.length == 1) {
                             _this.descending = false;
-                            _this.speedMs = 150;
+                            _this.speedMs = 200;
                         }
                         else if (_this.stringA.length == _this.stringB.length + 1) {
                             _this.descending = true;
-                            _this.speedMs = 100;
+                            _this.speedMs = 150;
                         }
                         if (!_this.descending) {
                             _this.stringA += _this.stringB[_this.count];
