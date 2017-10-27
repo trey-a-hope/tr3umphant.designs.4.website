@@ -9,6 +9,7 @@ module App.Pages.Home {
 
         static $inject = ['$scope', '$timeout'];
         constructor(public $scope: any, public $timeout: ng.ITimeoutService){
+            this.stringA += this.stringB;
             $timeout(this.countUp, this.speedMs);
         }
 

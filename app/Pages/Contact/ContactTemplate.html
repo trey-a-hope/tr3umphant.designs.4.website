@@ -39,7 +39,7 @@
                         <div class="md-form">
                             <i class="fa fa-tag prefix"></i>
                             <textarea type="text" id="message" class="md-textarea" required="required"  ng-model="vm.message" maxlength="400"></textarea>
-                            <label class="active" for="message">Message <strong>({{ vm.message.length + '/' + vm.messageLimit }})</strong></label>
+                            <label class="active" for="message">Message <strong>( {{ ( vm.message.length ? vm.message.length : '0' ) + '/' + vm.messageLimit }} )</strong></label>
                         </div>
 
                         <div class="text-center">

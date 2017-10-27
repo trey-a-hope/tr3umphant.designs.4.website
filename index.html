@@ -55,7 +55,7 @@
 
   <body ng-controller="ParentController as vm">
     <!--Navbar-->
-    <nav class="navbar navbar-toggleable-sm navbar-dark teal darken-4">
+    <nav class="navbar fixed-top scrolling-navbar navbar-toggleable-sm navbar-dark teal darken-4">
         <div class="container">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -97,8 +97,8 @@
       }
     </style>
     
-    <!-- Main Views -->
-    <div ui-view=""></div>
+    <!-- Main Views (padding added to account for static navbar) -->
+    <div ui-view="" style="padding-top: 64px"></div>
 
     <!-- Footer -->
     <footer class="page-footer teal darken-4">

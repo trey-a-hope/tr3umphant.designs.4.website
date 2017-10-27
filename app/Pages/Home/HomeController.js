@@ -33,7 +33,7 @@ var App;
                         }
                         _this.$timeout(_this.countUp, _this.speedMs);
                     };
-                    $timeout(this.countUp, this.speedMs);
+                    this.stringA += this.stringB;
                 }
                 return HomeController;
             }());
