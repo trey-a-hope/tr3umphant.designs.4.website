@@ -42,9 +42,9 @@ var App;
                     });
                 };
             }
+            ModalService.$inject = ['$modal', '$q', 'ngToast'];
             return ModalService;
         }());
-        ModalService.$inject = ['$modal', '$q', 'ngToast'];
         Services.ModalService = ModalService;
         angular.module('tr3umphant-designs').service('ModalService', ModalService);
     })(Services = App.Services || (App.Services = {}));

@@ -8,9 +8,9 @@ var App;
                 this.$http = $http;
                 this.myFirebaseRef = myFirebaseRef;
             }
+            GraphicDesignController.$inject = ['$scope', '$http', 'MyFirebaseRef'];
             return GraphicDesignController;
         }());
-        GraphicDesignController.$inject = ['$scope', '$http', 'MyFirebaseRef'];
         GraphicDesign.GraphicDesignController = GraphicDesignController;
         angular.module('tr3umphant-designs').controller('GraphicDesignController', GraphicDesignController);
     })(GraphicDesign = App.GraphicDesign || (App.GraphicDesign = {}));

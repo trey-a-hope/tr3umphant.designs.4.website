@@ -1,0 +1,20 @@
+[
+    {
+        "title"     : "MDBootstrap",
+        "subtitle"  : "The future of integrated payment services for software developers is here.",
+        "category"  : "Development",
+        "timestamp" : "Mon Jun 05 2017",
+        "image"     : "https://camo.githubusercontent.com/c2717903317313b5197cf54b8b6755cefc18b4fa/68747470733a2f2f6d64626f6f7473747261702e636f6d2f696d672f4d6f636b7570732f4d44422d706f73742f626f6f7473747261702d6d6174657269616c2d64657369676e2e6a7067",
+        "html"      : "<h1>Top Notch UI</h1>  <p>While deciding to start my own personal software development service, I always found it to be a hassle to ensure I have ALL the UI components neccessary to create a good website. As you can imagine, that took up alot of my time from development to look for icons, themes, colors, any much more. However, with MDBootstrap, (a hybrid between Google's Material Design and Twitter's Bootstrap), styling on the front end has never been easier. I can now put more emphasis to my functionality of my projects and leave the presentation to those that do it best. Be sure to check this out <a href=\\\\\\\"https://mdbootstrap.com/\\\\\\\">here</a>.</p>  <hr> <h1>First Project Used</h1>  <p>This website is currently the first project that I have created using MDBootstrap. The components mesh quite well together, from css animations to each UI component you see currently on the screen. It even comes with a plethora of colors shemes so I can easily update the look and feel of my website with little to no code changes. Great job MDBootstrap, you've made a customer truly happy!</p>",
+        "tag"       : "mdbootstrap"
+    },
+    {
+        "title"     : "Stripe API",
+        "subtitle"  : "The future of integrated payment services for software developers is here.",
+        "category"  : "Stripe, Payment Services",
+        "timestamp" : "Tuesday Dec 05 2017",
+        "image"     : "https://stripe.com/img/v3/connect/social.png",        
+        "html"      : "<h1>Test</h1>",
+        "tag"       : "stripeAPI"        
+    }
+]

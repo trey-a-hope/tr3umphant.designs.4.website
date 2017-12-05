@@ -9,9 +9,9 @@ var App;
                 this.myFirebaseRef = myFirebaseRef;
                 this.comments = new Array();
             }
+            CommentsController.$inject = ['$scope', '$http', 'MyFirebaseRef'];
             return CommentsController;
         }());
-        CommentsController.$inject = ['$scope', '$http', 'MyFirebaseRef'];
         Comments.CommentsController = CommentsController;
         var Comment = (function () {
             function Comment() {

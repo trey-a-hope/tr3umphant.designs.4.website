@@ -1,13 +1,11 @@
 declare module App.Models {
     class Blog {
-        id: string;
         title: string;
         subtitle: string;
         category: string;
-        postDateTime: string;
+        timestamp: string;
+        image: string;
         html: string;
         tag: string;
-        views: number;
-        shares: number;
     }
 }

@@ -11,9 +11,9 @@ var App;
                     window.open("https://drive.google.com/open?id=0B0_tFXHHRl4tUl9uS2dwb05WWDQ");
                 };
             }
+            SkillsController.$inject = ['$scope', '$http', 'MyFirebaseRef'];
             return SkillsController;
         }());
-        SkillsController.$inject = ['$scope', '$http', 'MyFirebaseRef'];
         Skills.SkillsController = SkillsController;
         angular.module('tr3umphant-designs').controller('SkillsController', SkillsController);
     })(Skills = App.Skills || (App.Skills = {}));

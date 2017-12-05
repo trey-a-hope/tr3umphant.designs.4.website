@@ -14,9 +14,9 @@ var App;
                     _this.$modalInstance.close();
                 };
             }
+            DisplayNotificationModalController.$inject = ['$modalInstance', 'notificationMessage', 'header', 'acknowledgeButtonText', 'success'];
             return DisplayNotificationModalController;
         }());
-        DisplayNotificationModalController.$inject = ['$modalInstance', 'notificationMessage', 'header', 'acknowledgeButtonText', 'success'];
         Modal.DisplayNotificationModalController = DisplayNotificationModalController;
         angular.module('tr3umphant-designs').controller('DisplayNotificationModalController', DisplayNotificationModalController);
     })(Modal = App.Modal || (App.Modal = {}));

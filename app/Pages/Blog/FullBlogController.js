@@ -17,8 +17,6 @@ var App;
                         _this.$state.go('blogs');
                     };
                     this.share = function (provider) {
-                        _this.blog.shares += 1;
-                        _this.myFirebaseRef.blogDatabaseRef.child(_this.blog.id).child('shares').set(_this.blog.shares);
                         var url = _this.$location.absUrl();
                         var text = 'Blog - ' + _this.blog.title;
                         switch (provider) {
@@ -39,12 +37,16 @@ var App;
                         var path = $location.absUrl();
                         var n = path.lastIndexOf('/');
                         var tag = path.substring(n + 1);
-                        this.myFirebaseRef.blogDatabaseRef.orderByChild("tag").equalTo(tag).on('child_added', function (snapshot) {
-                            _this.blog = snapshot.val();
-                            _this.myFirebaseRef.blogDatabaseRef.child(_this.blog.id).child('views').set(_this.blog.views + 1);
-                            if (!_this.$scope.$$phase) {
-                                _this.$scope.$apply();
-                            }
+                        this.$http.get('json/Blogs.json')
+                            .then(function (response) {
+                            var blogs = response.data;
+                            blogs.forEach(function (b) {
+                                if (b.tag == tag) {
+                                    _this.blog = b;
+                                }
+                            });
+                        })
+                            .catch(function (error) {
                         });
                     }
                     else {
@@ -53,9 +55,9 @@ var App;
                     }
                     window.scrollTo(0, 0);
                 }
+                FullBlogController.$inject = ['$scope', '$http', 'MyFirebaseRef', '$state', '$location'];
                 return FullBlogController;
             }());
-            FullBlogController.$inject = ['$scope', '$http', 'MyFirebaseRef', '$state', '$location'];
             Blog_1.FullBlogController = FullBlogController;
             angular.module('tr3umphant-designs').controller('FullBlogController', FullBlogController);
         })(Blog = Pages.Blog || (Pages.Blog = {}));

@@ -97,9 +97,9 @@ var App;
                         _this.$state.go('contact', { message: message });
                     };
                 }
+                ServiceController.$inject = ['$scope', '$state'];
                 return ServiceController;
             }());
-            ServiceController.$inject = ['$scope', '$state'];
             Service.ServiceController = ServiceController;
             angular.module('tr3umphant-designs').controller('ServiceController', ServiceController);
         })(Service = Pages.Service || (Pages.Service = {}));

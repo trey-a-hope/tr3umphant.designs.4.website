@@ -75,9 +75,9 @@ var App;
                 }
                 this.prepareToastMessages();
             }
+            ContactController.$inject = ['$scope', '$http', '$location', 'EmailService', '$state'];
             return ContactController;
         }());
-        ContactController.$inject = ['$scope', '$http', '$location', 'EmailService', '$state'];
         Contact.ContactController = ContactController;
         angular.module('tr3umphant-designs').controller('ContactController', ContactController);
     })(Contact = App.Contact || (App.Contact = {}));

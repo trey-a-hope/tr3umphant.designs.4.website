@@ -34,10 +34,11 @@ var App;
                         _this.$timeout(_this.countUp, _this.speedMs);
                     };
                     this.stringA += this.stringB;
+                    $timeout(this.countUp, this.speedMs);
                 }
+                HomeController.$inject = ['$scope', '$timeout'];
                 return HomeController;
             }());
-            HomeController.$inject = ['$scope', '$timeout'];
             Home.HomeController = HomeController;
             angular.module('tr3umphant-designs').controller('HomeController', HomeController);
         })(Home = Pages.Home || (Pages.Home = {}));

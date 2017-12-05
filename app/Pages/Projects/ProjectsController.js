@@ -8,9 +8,9 @@ var App;
                 this.$http = $http;
                 this.myFirebaseRef = myFirebaseRef;
             }
+            ProjectsController.$inject = ['$scope', '$http', 'MyFirebaseRef'];
             return ProjectsController;
         }());
-        ProjectsController.$inject = ['$scope', '$http', 'MyFirebaseRef'];
         Projects.ProjectsController = ProjectsController;
         angular.module('tr3umphant-designs').controller('ProjectsController', ProjectsController);
     })(Projects = App.Projects || (App.Projects = {}));

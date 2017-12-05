@@ -12,9 +12,9 @@ var App;
                     window.open("https://drive.google.com/open?id=0B0_tFXHHRl4tUl9uS2dwb05WWDQ");
                 };
             }
+            AboutController.$inject = ['$scope', '$http', 'MyFirebaseRef'];
             return AboutController;
         }());
-        AboutController.$inject = ['$scope', '$http', 'MyFirebaseRef'];
         About.AboutController = AboutController;
         angular.module('tr3umphant-designs').controller('AboutController', AboutController);
     })(About = App.About || (App.About = {}));

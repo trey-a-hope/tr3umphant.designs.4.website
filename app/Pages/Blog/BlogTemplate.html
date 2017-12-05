@@ -58,10 +58,10 @@
                     </div>
                 </div>
             </div>  
-            <div ng-hide="vm.isLoading" ng-repeat="blog in vm.blogs" class="col-sm-4">
+            <div ng-hide="vm.isLoading" ng-repeat="blog in vm.blogs | orderBy : '-timestamp'" class="col-sm-4">
                 <div class="card">
                     <div class="view overlay hm-white-slight">
-                        <img src="img/blogs/mdbootstrap.jpeg" class="img-fluid" alt="">
+                        <img ng-src="{{ blog.image }}" class="img-fluid" alt="">
                         <a>
                             <div class="mask waves-effect waves-light"></div>
                         </a>
@@ -74,42 +74,9 @@
                     </div>
                     <div class="card-data teal">
                         <ul>
-                            <li><i class="fa fa-clock-o"></i> {{ blog.postDateTime | date: 'yyyy MM dd' }}</li>
-                            <li><i class="fa fa-eye"></i> {{ blog.views }}</li>
-                            <li><i class="fa fa-share-alt"></i> {{ blog.shares }}</li>
+                            <li><i class="fa fa-clock-o"></i> {{ blog.timestamp | date: 'yyyy MM dd' }}</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <!-- Add Blog Section -->
-        <div class="row">
-            <div class="col">
-                <!--<button class="btn red" ng-click="vm.toggleBlogForm()">Add Blog</button>-->
-                <div ng-show="vm.showBlogForm">
-                    <a href="https://html-online.com/editor/">Editor</a>
-                    <ng-form novalidate name="contactForm">
-                        <div class="md-form">
-                            <input type="text" id="title" class="form-control" required="required" ng-model="vm.newBlog.title">
-                            <label for="title">Title</label>
-                        </div>
-                        <div class="md-form">
-                            <input type="text" id="subtitle" class="form-control" required="required" ng-model="vm.newBlog.subtitle">
-                            <label for="subtitle">Subtitle</label>
-                        </div>
-                        <div class="md-form">
-                            <input type="text" id="subtitle" class="form-control" required="required" ng-model="vm.newBlog.category">
-                            <label for="category">Category</label>
-                        </div>
-                        <div class="md-form">
-                            <input type="text" id="html" class="form-control" required="required" ng-model="vm.newBlog.html">
-                            <label for="html">HTML</label>
-                        </div>
-                        <div class="text-center">
-                            <button class="btn teal" ng-click="vm.saveBlog()">Save Blog</button>
-                        </div>
-                    </ng-form>
                 </div>
             </div>
         </div>
